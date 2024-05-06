@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P_M_S</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="crud"> <!-- شايل المشروع بالكامل -->
+
+        <div class="head"> <!-- رأس المشروع او العنوان الرئيسي -->
+            <h2>P_M_S</h2>
+            <p>Product Managment System</p>
+
+        </div>
+
+        <div class="inputs"> <!-- المدخلات -->
+            <div id="title_count">
+                <input placeholder="count of the product" type="number" id="count">
+                <input placeholder="enter your product " type="text" id="title">
+                <input placeholder="Category" type="text" id="Category">
+            </div>
+            
+            <div class="input-price">
+                <input onkeyup="GetTotal()" placeholder="price" type="number" id="price">
+                <input onkeyup="GetTotal()" placeholder="the taxes" type="number" id="taxes">
+                <input onkeyup="GetTotal()" placeholder="the Adds" type="number" id="adds">
+                <input onkeyup="GetTotal()" placeholder="discount" type="number" id="discound">
+                <small id="total"></small>
+            </div>
+            
+            
+            <button id="submit">Add to list ⇓ ∜ </button>
+        </div>
+
+        <div class="output"> <!-- المخرجات -->
+            
+            <div id="searchBlock">
+                <input onkeyup="SearchData(this.value)" placeholder="Search 🔎" type="text" id="Search">
+                <div class="btnSrearch">
+                    <button onclick="GetSearchMood(this.id)" id="searchTitle">Search By Title 🔎</button>
+                    <button onclick="GetSearchMood(this.id)" id="searchCategoy">Search By Category 🔎</button>
+                </div>
+                <div class="MergeSort">
+                        
+                </div>
+            </div>
+            <br>
+            <div id="DeleteAll">
+
+            </div>
+            <table id="table"> <!-- جدول بيانات المنتجات -->
+                <tr>  <!-- الصف الاول -->
+                   <th>ID</th>
+                   <th>Title</th>
+                   <th>Price</th>
+                   <th>Taxes</th>
+                   <th>Adds</th>
+                   <th>Discount</th>
+                   <th>Category</th>
+                   <th class="TotalPIL">Total</th>
+                   <th>count</th>
+                   <th>Update</th>
+                   <th>Delete</th>
+                </tr>   <!--  -->
+                <tbody id="tbody">
+                    
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
